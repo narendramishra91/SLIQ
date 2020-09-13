@@ -2,11 +2,16 @@ import pandas as pd
 
 class DesisionTreeClassifier:
     
+    """ Creates a decision tree based on training data """
+    
     def __init__(self):
         self.root = None
         
         
     class Node:
+        
+        """ Object of this class is a node for decision tree """
+        
         def __init__(self):
             self.left = None
             self.right = None
@@ -160,7 +165,7 @@ class DesisionTreeClassifier:
             else:
                 current_node = current_node.right
         
-        print(current_node.decValue) 
+        return current_node.decValue 
         
         
         
