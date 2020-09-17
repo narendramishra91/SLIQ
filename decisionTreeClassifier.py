@@ -10,7 +10,15 @@ class DesisionTreeClassifier:
         
     class Node:
         
-        """ Object of this class is a node for decision tree """
+        """ Object of this class is a node for decision tree
+        Parameters:
+                 left(object of Node class): represents the left child of Node
+                 right(object of Node class): represents the right child of Node
+                 pure(binary): is True if node is pure else False
+                 decCrit(float): critical point from where the branch has to saperate.
+                 decValue: Value of the pure Node i.e. class
+                 decColumn: Value of the decision column 
+        """
         
         def __init__(self):
             self.left = None
@@ -39,7 +47,7 @@ class DesisionTreeClassifier:
     
     def giniIndexAgg(self, fr_tab1, fr_tab2, total1, total2, p1, p2):
 
-        """ Calculate the gini index given the initial frequency table """
+        """ Calculate the aggrigate gini index given the initial frequency table """
     
         prob1 = self.ginniIndex(fr_tab1, total1)
         prob2 = self.ginniIndex(fr_tab2, total2)
